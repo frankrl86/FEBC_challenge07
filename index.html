@@ -30,11 +30,125 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+
       <!-- Timeblocks go here -->
-    </div>
+      <div class="container py-3">
+        <!-- 9AM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label9"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >9AM</label
+          >
+          <textarea id="textArea9"
+            class="form-control mx-2"
+            aria-label="Event description"
+          ></textarea>
+          <button id="btn9" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 10AM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label10"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >10AM</label
+          >
+          <textarea id="textArea10"
+            class="form-control mx-2"
+            aria-label="Event description"
+          ></textarea>
+          <button id="btn10" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 11AM Slot -->
+        <div  class="d-flex align-items-center mb-3">
+          <label id="label11"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >11AM</label
+          >
+          <textarea id="textArea11" class="form-control mx-2" aria-label="Event description"></textarea
+          >
+          <button id="btn11" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 12PM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label12"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >12PM</label
+          >
+          <textarea id="textArea12" class="form-control mx-2" aria-label="Event description"></textarea
+          >
+          <button id="btn12" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 1PM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label13"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >1PM</label
+          >
+          <textarea id="textArea13"
+            class="form-control mx-2"
+            aria-label="Event description"
+          ></textarea>
+          <button id="btn13" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 2PM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label14"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >2PM</label
+          >
+          <textarea id="textArea14"
+            class="form-control mx-2"
+            aria-label="Event description"
+          ></textarea>
+          <button id="btn14" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 3PM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label15"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >3PM</label
+          >
+          <textarea id="textArea15"
+            class="form-control mx-2"
+            aria-label="Event description"
+          ></textarea>
+          <button id="btn15" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 4PM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label16" 
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >4PM</label
+          >
+          <textarea id="textArea16"
+            class="form-control mx-2"
+            aria-label="Event description"
+          ></textarea>
+          <button id="btn16" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+  
+        <!-- 5PM Slot -->
+        <div class="d-flex align-items-center mb-3">
+          <label id="label17"
+            class="flex-grow-1 text-sm fw-bold py-2 px-3 m-0"
+            >5PM</label
+          >
+          <textarea id="textArea17" class="form-control mx-2" aria-label="Event description"></textarea
+          >
+          <button id="btn17" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+        </div>
+
+  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/advancedFormat.js"></script>
+    <script src="./js/logic.js"></script>
   </body>
 </html>
