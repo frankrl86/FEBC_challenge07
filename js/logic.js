@@ -6,30 +6,46 @@ var currentDay = $("#currentDay");
 var flagStored = 0;
 // Initialize variables.
 var today = dayjs().format("dddd, MMMM Do");
+var currentTime = dayjs();
 currentDay.text(today);
 
 function initializeTimeSlots() {
   let time = dayjs().hour(9).minute(0).second(0);
   let textAreaVal;
   let textAreaId;
+  let currentHour = currentTime.hour();
+
   flagStored = localStorage.getItem("flagStored");
-  console.log("Valor de eventsCount:" + flagStored);
+  console.log("Val of eventsCount:" + flagStored);
+  console.log("***Current hour:" + currentHour);
   for (let hour = 9; hour <= 17; hour++) {
     console.log(time.format("hh:mm A"));
     let labelId = "#label" + hour;
     $(labelId).text(time.format("hh:mm A"));
     if (flagStored == null) {
-      console.log("Value is null");
+      console.log("Value is null - First time of execution");
       localStorage.setItem(time.format("hh:mm A"), "");
     } else {
-      console.log("Value is not null");
+      console.log("Value is not null - Information stored");
       textAreaVal = localStorage.getItem(time.format("hh:mm A"));
       textAreaId = "#textArea" + hour;
       $(textAreaId).text(textAreaVal);
     }
+    changeTextAreaStyle(textAreaId, currentHour, hour);
     time = time.add(1, "hour");
   }
   localStorage.setItem("flagStored", "1");
+}
+
+function changeTextAreaStyle(textArea, currentHour, currentVal) {
+  console.log("Current Hour:" + currentHour + " CurrentVal:" + currentVal);
+  if (currentHour > currentVal) {
+    $(textArea).addClass("past");
+  } else if (currentHour == currentVal) {
+    $(textArea).addClass("present");
+  } else {
+    $(textArea).addClass("future");
+  }
 }
 
 function setEventDescription(id = 0) {
